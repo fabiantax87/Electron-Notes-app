@@ -1,0 +1,48 @@
+.app {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+
+  .saved-notes-bar {
+    height: 100vh;
+    border-right: 2px solid var(--dark-blue);
+
+    .notes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+
+      .note-small {
+        margin: 0px 10px;
+        padding: 10px;
+        background-color: var(--dark-blue);
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 10px 0px 10px;
+
+    input,
+    textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background-color: var(--dark-blue);
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 0px 0px 2px var(--light-blue);
+      }
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+}
